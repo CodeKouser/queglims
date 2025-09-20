@@ -2,7 +2,7 @@ import { MongoClient } from "mongodb";
 
 const uri = process.env.MONGO_URI;
 
-console.log('MONGO_URI:',uri);
+console.log('MONGO_URI:',.env.MONGO_URI);
 
 if (!uri) {
   throw new Error("MONGO_URI is not defined. Please set it in your environment variables.");
