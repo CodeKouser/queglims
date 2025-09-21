@@ -1,4 +1,4 @@
-name = "your-project-name"
+name = "queglims"
 compatibility_date = "2025-09-21"
 compatibility_flags = ["nodejs_compat"]
 
