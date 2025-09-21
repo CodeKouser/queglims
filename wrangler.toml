@@ -6,3 +6,7 @@ compatibility_flags = ["nodejs_compat"]
 command = "npm run build"
 format = "modules"
 main = "./.svelte-kit/cloudflare/_worker.js"
+
+
+[vars]
+MONGO_URI = "mongodb+srv://leader:Database007&@cluster0.arqkfid.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"

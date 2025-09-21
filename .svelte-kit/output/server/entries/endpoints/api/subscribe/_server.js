@@ -1,7 +1,11 @@
 import { json } from "@sveltejs/kit";
 import { MongoClient } from "mongodb";
-const PRIVATE_MONGO_URI = "mongodb+srv://leader:Database007&@cluster0.arqkfid.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
-const uri = process.env.MONGO_URI || PRIVATE_MONGO_URI;
+const uri = process.env.MONGO_URI;
+if (!uri) {
+  throw new Error(
+    "MONGO_URI is not defined. Please set it in your environment variables."
+  );
+}
 const client$1 = new MongoClient(uri);
 const databasePromise = client$1.connect();
 const client = await databasePromise;
