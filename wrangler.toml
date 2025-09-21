@@ -1,10 +1,3 @@
 name = "queglims"
 compatibility_date = "2025-09-21"
-compatibility_flags = ["nodejs_compat"]
-
-[build]
-command = "npm run build"  # Command to build the project
-upload = {
-    format = "modules",  # Upload format should be modules for Cloudflare Workers
-    dir = ".svelte-kit/cloudflare"  # Specify the directory where the worker file is located
-}
+main = ".svelte-kit/cloudflare/_worker.js"
