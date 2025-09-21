@@ -1,6 +1,8 @@
 import { MongoClient } from "mongodb";
 
-const uri = process.env.MONGO_URI;
+import { PRIVATE_MONGO_URI } from "$env/static/private";
+
+const uri = process.env.MONGO_URI || PRIVATE_MONGO_URI;
 
 if (!uri) {
   throw new Error(

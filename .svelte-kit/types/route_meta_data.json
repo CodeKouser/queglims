@@ -1,0 +1,6 @@
+{
+	"/": [],
+	"/api/subscribe": [
+		"src/routes/api/subscribe/+server.js"
+	]
+}
