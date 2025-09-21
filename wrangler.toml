@@ -3,5 +3,8 @@ compatibility_date = "2025-09-21"
 compatibility_flags = ["nodejs_compat"]
 
 [build]
-command = "npm run build"
-upload.main = ".svelte-kit/cloudflare/_worker.js"
+command = "npm run build"  # Ensure that the build command is correct
+upload = { 
+    format = "modules",  # Ensure the correct format is set for the worker
+    dir = ".svelte-kit/cloudflare"  # Directory containing the worker files
+}
