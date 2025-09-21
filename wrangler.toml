@@ -4,4 +4,4 @@ compatibility_flags = ["nodejs_compat"]
 
 [build]
 command = "npm run build"
-main = "src/index.ts"
+upload.main = ".svelte-kit/cloudflare/_worker.js"
